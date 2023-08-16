@@ -30,7 +30,15 @@ defineProps(getSliceComponentProps<Content.ImageSlice>(
         enlarge.style.display = 'block'
           }
         " :field="item.image" class="bg-gray-100"/>
-        <div v-if="item.video.url" class="pt-1.5"><video onclick="this.play()" type="video/mp4" playsinline :src="item.video.url"></video></div>
+        <div v-if="item.video.url" class="pt-1.5"><video onclick="
+          if(window.innerWidth > 640){
+        let enlarge = document.getElementById('enlarge')
+        let emage = enlarge.getElementsByTagName('video')[0]
+        emage.src = this.src
+        enlarge.style.display = 'block'
+          }
+          else {this.play()}
+        " type="video/mp4" playsinline :src="item.video.url"></video></div>
       </div>
     </div>
   </Bounded>
