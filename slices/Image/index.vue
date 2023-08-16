@@ -38,7 +38,7 @@ defineProps(getSliceComponentProps<Content.ImageSlice>(
         enlarge.style.display = 'block'
           }
           else {this.play()}
-        " type="video/mp4" playsinline :src="item.video.url"></video></div>
+        " type="video/mp4" playsinline controls :src="item.video.url"></video></div>
       </div>
     </div>
   </Bounded>
