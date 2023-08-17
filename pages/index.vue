@@ -111,7 +111,7 @@ for (let index = 0; index < bottomimage.length; index++) {
  
 " type="text" placeholder="Search.."></div></div>
   <div class="px-2.5 pb-[100px]">
-  <MasonryWall :items="items" :ssr-columns="1" :max-columns="5" :column-width="250" :gap="14">
+  <MasonryWall :items="items" :ssr-columns="1" :max-columns="6" :column-width="250" :gap="14">
     <template #default="{ item, index }">
       <div
       v-html="item"
