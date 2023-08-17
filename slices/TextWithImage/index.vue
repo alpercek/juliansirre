@@ -16,7 +16,7 @@ defineProps(getSliceComponentProps<Content.TextWithImageSlice>(
     <div :class="{ 'flex-col-reverse': slice.variation === 'textOnTop'}" class="gap-3.5 flex flex-col">
       <div class="px-1.5 tracking-tight text-base font-metrik leading-5">
     <PrismicRichText :field="slice.primary.date"/>
-    <PrismicRichText class="underline uppercase pb-6" :field="slice.primary.title"/>
+    <PrismicRichText class="underline uppercase font-bold pb-6" :field="slice.primary.title"/>
     <PrismicRichText :field="slice.primary.text"/>
   </div>
       
