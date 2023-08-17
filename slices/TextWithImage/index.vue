@@ -17,7 +17,7 @@ defineProps(getSliceComponentProps<Content.TextWithImageSlice>(
       <div class="px-1.5 tracking-tight text-base font-metrik leading-5">
     <PrismicRichText :field="slice.primary.date"/>
     <PrismicRichText class="underline uppercase font-bold pb-6" :field="slice.primary.title"/>
-    <PrismicRichText :field="slice.primary.text"/>
+    <PrismicRichText :field="slice.primary.text" class="hyphens-auto"/>
   </div>
       
         <div v-if="slice.items.length > 0" class="px-1.5 flex gap-1.5 flex-col">
