@@ -14,7 +14,7 @@ defineProps(getSliceComponentProps<Content.TextSlice>(
     class="bg-white leading-relaxed"
   >
   
-  <div class="px-1.5 tracking-tight text-sm font-metrik leading-5">
+  <div class="px-1.5 tracking-tight text-base font-metrik leading-5">
     <PrismicRichText :field="slice.primary.date"/>
     <PrismicRichText class="underline uppercase pb-6" :field="slice.primary.title"/>
     <PrismicRichText :field="slice.primary.text"/>

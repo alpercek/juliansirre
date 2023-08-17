@@ -14,7 +14,7 @@ defineProps(getSliceComponentProps<Content.TextWithImageSlice>(
     class="bg-white"
   >
     <div :class="{ 'flex-col-reverse': slice.variation === 'textOnTop'}" class="gap-3.5 flex flex-col">
-      <div class="px-1.5 tracking-tight text-sm font-metrik leading-5">
+      <div class="px-1.5 tracking-tight text-base font-metrik leading-5">
     <PrismicRichText :field="slice.primary.date"/>
     <PrismicRichText class="underline uppercase pb-6" :field="slice.primary.title"/>
     <PrismicRichText :field="slice.primary.text"/>
@@ -41,7 +41,7 @@ defineProps(getSliceComponentProps<Content.TextWithImageSlice>(
         " type="video/mp4" playsinline controls :src="item.video.url"></video></div>
       </div>
     </div>
-    <div v-if="slice.variation === 'imageBetween'" class="px-1.5 tracking-tight text-sm font-metrik leading-5"><PrismicRichText :field="slice.primary.text"/></div>
+    <div v-if="slice.variation === 'imageBetween'" class="px-1.5 tracking-tight text-base font-metrik leading-5"><PrismicRichText :field="slice.primary.text"/></div>
     </div>
   </Bounded>
 </template>
