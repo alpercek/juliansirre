@@ -24,3 +24,10 @@ html {
   scrollbar-width: none;
   background-color: white;
 }
+
+.hyphens-auto{
+  -webkit-hyphenate-limit-before: 3; /* For Safari */
+  -webkit-hyphenate-limit-after: 3; /* For Safari */
+  -ms-hyphenate-limit-chars: 6 3 3;
+  hyphenate-limit-chars: 6 3 3;
+}
