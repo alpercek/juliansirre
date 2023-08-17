@@ -37,8 +37,8 @@ defineProps(getSliceComponentProps<Content.TextWithImageSlice>(
         emage.src = this.src
         enlarge.style.display = 'block'
           }
-          else {this.play()}
-        " type="video/mp4" playsinline controls :src="item.video.url"></video></div>
+          else {this.play(); controls = true}
+        " type="video/mp4" playsinline :src="item.video.url"></video></div>
       </div>
     </div>
     <div v-if="slice.variation === 'imageBetween'" class="px-1.5 tracking-tight text-base font-metrik leading-5"><PrismicRichText :field="slice.primary.text"/></div>

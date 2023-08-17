@@ -7,15 +7,9 @@
 				"__TYPE__": "StructuredTextContent",
 				"value": [
 					{
-						"type": "heading1",
-						"content": {
-							"text": "Might"
-						}
-					},
-					{
 						"type": "paragraph",
 						"content": {
-							"text": "Cillum aute duis nostrud nulla nisi. Occaecat exercitation id nulla do magna duis minim."
+							"text": "Laborum et eiusmod minim."
 						}
 					}
 				]

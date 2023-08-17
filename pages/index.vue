@@ -70,6 +70,7 @@ for (let index = 0; index < bottomimage.length; index++) {
   
 }
 
+
 },
 })
 </script>
