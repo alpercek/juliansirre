@@ -44,7 +44,3 @@ defineProps(getSliceComponentProps<Content.ImageSlice>(
     </div>
   </Bounded>
 </template>
-<script lang="ts">
-
-
-</script>

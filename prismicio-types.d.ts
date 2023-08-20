@@ -202,23 +202,12 @@ interface PageDocumentData {
 export type PageDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithUID<Simplify<PageDocumentData>, "page", Lang>;
 
-type SelectedProjectDocumentDataSlicesSlice = never;
+type SelectedProjectDocumentDataSlicesSlice = S3366Slice;
 
 /**
  * Content for Selected Project documents
  */
 interface SelectedProjectDocumentData {
-  /**
-   * text field in *Selected Project*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: selected_project.text
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  text: prismic.RichTextField;
-
   /**
    * Slice Zone field in *Selected Project*
    *
@@ -384,6 +373,266 @@ type ImageSliceVariation = ImageSliceDefault;
  * - **Documentation**: https://prismic.io/docs/slice
  */
 export type ImageSlice = prismic.SharedSlice<"image", ImageSliceVariation>;
+
+/**
+ * Primary content in *S3366 → Primary*
+ */
+export interface S3366SliceDefaultPrimary {
+  /**
+   * L33 field in *S3366 → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: s3366.primary.l33
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  l33: prismic.ImageField<never>;
+
+  /**
+   * title field in *S3366 → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: s3366.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  title: prismic.RichTextField;
+
+  /**
+   * year field in *S3366 → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: s3366.primary.year
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  year: prismic.RichTextField;
+
+  /**
+   * fig field in *S3366 → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: s3366.primary.fig
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  fig: prismic.RichTextField;
+
+  /**
+   * 33link field in *S3366 → Primary*
+   *
+   * - **Field Type**: Content Relationship
+   * - **Placeholder**: *None*
+   * - **API ID Path**: s3366.primary.33link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  "33link": prismic.ContentRelationshipField;
+
+  /**
+   * 66link field in *S3366 → Primary*
+   *
+   * - **Field Type**: Content Relationship
+   * - **Placeholder**: *None*
+   * - **API ID Path**: s3366.primary.66link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  "66link": prismic.ContentRelationshipField;
+}
+
+/**
+ * Primary content in *S3366 → Items*
+ */
+export interface S3366SliceDefaultItem {
+  /**
+   * R66 field in *S3366 → Items*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: s3366.items[].r66
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  r66: prismic.ImageField<never>;
+
+  /**
+   * title field in *S3366 → Items*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: s3366.items[].title
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  title: prismic.RichTextField;
+
+  /**
+   * year field in *S3366 → Items*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: s3366.items[].year
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  year: prismic.RichTextField;
+
+  /**
+   * fig field in *S3366 → Items*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: s3366.items[].fig
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  fig: prismic.RichTextField;
+}
+
+/**
+ * Default variation for S3366 Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type S3366SliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<S3366SliceDefaultPrimary>,
+  Simplify<S3366SliceDefaultItem>
+>;
+
+/**
+ * Primary content in *S3366 → Primary*
+ */
+export interface S3366SliceSwappedL66R33Primary {
+  /**
+   * L33 field in *S3366 → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: s3366.primary.l33
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  l33: prismic.ImageField<never>;
+
+  /**
+   * title field in *S3366 → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: s3366.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  title: prismic.RichTextField;
+
+  /**
+   * year field in *S3366 → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: s3366.primary.year
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  year: prismic.RichTextField;
+
+  /**
+   * fig field in *S3366 → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: s3366.primary.fig
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  fig: prismic.RichTextField;
+
+  /**
+   * 33link field in *S3366 → Primary*
+   *
+   * - **Field Type**: Content Relationship
+   * - **Placeholder**: *None*
+   * - **API ID Path**: s3366.primary.33link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  "33link": prismic.ContentRelationshipField;
+
+  /**
+   * 66link field in *S3366 → Primary*
+   *
+   * - **Field Type**: Content Relationship
+   * - **Placeholder**: *None*
+   * - **API ID Path**: s3366.primary.66link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  "66link": prismic.ContentRelationshipField;
+}
+
+/**
+ * Primary content in *S3366 → Items*
+ */
+export interface S3366SliceSwappedL66R33Item {
+  /**
+   * R66 field in *S3366 → Items*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: s3366.items[].r66
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  r66: prismic.ImageField<never>;
+
+  /**
+   * title field in *S3366 → Items*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: s3366.items[].title
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  title: prismic.RichTextField;
+
+  /**
+   * year field in *S3366 → Items*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: s3366.items[].year
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  year: prismic.RichTextField;
+
+  /**
+   * fig field in *S3366 → Items*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: s3366.items[].fig
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  fig: prismic.RichTextField;
+}
+
+/**
+ * Swapped L66 R33 variation for S3366 Slice
+ *
+ * - **API ID**: `swappedL66R33`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type S3366SliceSwappedL66R33 = prismic.SharedSliceVariation<
+  "swappedL66R33",
+  Simplify<S3366SliceSwappedL66R33Primary>,
+  Simplify<S3366SliceSwappedL66R33Item>
+>;
+
+/**
+ * Slice variation for *S3366*
+ */
+type S3366SliceVariation = S3366SliceDefault | S3366SliceSwappedL66R33;
+
+/**
+ * S3366 Shared Slice
+ *
+ * - **API ID**: `s3366`
+ * - **Description**: S3366
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type S3366Slice = prismic.SharedSlice<"s3366", S3366SliceVariation>;
 
 /**
  * Primary content in *Text → Primary*
@@ -726,6 +975,14 @@ declare module "@prismicio/client" {
       ImageSliceDefaultItem,
       ImageSliceVariation,
       ImageSliceDefault,
+      S3366Slice,
+      S3366SliceDefaultPrimary,
+      S3366SliceDefaultItem,
+      S3366SliceSwappedL66R33Primary,
+      S3366SliceSwappedL66R33Item,
+      S3366SliceVariation,
+      S3366SliceDefault,
+      S3366SliceSwappedL66R33,
       TextSlice,
       TextSliceDefaultPrimary,
       TextSliceVariation,

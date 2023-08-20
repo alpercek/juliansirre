@@ -9,10 +9,10 @@
       <nav>
         <ul class="flex flex-wrap gap-3.5 mb-1.5 md:text-sm text-[1.313rem]">
           <li class="tracking-tight font-metrik">
-            <NuxtLink :to="'/selected_projects'">
+            <NuxtLink :to="'selected_projects'">
               SELECTED PROJECTS
             </NuxtLink></li><li class="tracking-tight font-metrik">
-          <NuxtLink :to="'/about'">
+          <NuxtLink :to="'about'">
               ABOUT
           </NuxtLink>
           </li>

@@ -7,7 +7,7 @@ const { data: page } = useAsyncData("[about]", () =>
 );
 
 useHead({
-  title: page.value?.data.meta_title,
+  title: 'Julian Sirre | About',
   meta: [
     {
       name: "description",

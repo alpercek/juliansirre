@@ -7,7 +7,7 @@ const { data: page } = useAsyncData("[selected_project]", () =>
 );
 
 useHead({
-  title: page.value?.data.meta_title,
+  title: 'Julian Sirre | Selected Projects',
   meta: [
     {
       name: "description",
@@ -18,9 +18,10 @@ useHead({
 </script>
 
 <template>
+  <div>
   <SliceZone
     wrapper="main"
     :slices="page?.data.slices ?? []"
     :components="components"
-  />
+  /></div>
 </template>
