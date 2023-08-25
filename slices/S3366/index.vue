@@ -16,7 +16,7 @@ defineProps(
 </script>
 
 <template>
-  <div :class="{'flex-row-reverse': slice.variation === 'swappedL66R33'}" class="flex gap-5">
+  <div :class="{'flex-row-reverse': slice.variation === 'swappedL66R33'}" class="flex gap-5 fadelement transition-all opacity-0">
     <div class="w-1/3">
   <PrismicImage :field="slice.primary.l33"/>
     </div>
@@ -29,7 +29,7 @@ defineProps(
       <navigation class="group-hover:opacity-100 opacity-0 transition-all"/>
     </template>
   </carousel>
-  <div v-else><PrismicImage :field="slice.items[0].r66" /></div>
+  <div v-else class="w-2/3"><PrismicImage :field="slice.items[0].r66"/></div>
   </div>
 </template>
 <script lang="ts">
