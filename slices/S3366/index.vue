@@ -16,7 +16,7 @@ defineProps(
 </script>
 
 <template>
-  <div :class="{'flex-row-reverse': slice.variation === 'swappedL66R33'}" class="flex gap-5 fadelement transition-all opacity-0">
+  <div :class="{'flex-row-reverse': slice.variation === 'swappedL66R33'}" class="flex pb-5 pl-4 pr-5 gap-5 fadelement transition-all opacity-0">
     <div class="w-1/3">
   <PrismicImage :field="slice.primary.l33"/>
     </div>
