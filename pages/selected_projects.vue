@@ -19,7 +19,7 @@ useHead({
 
 <template>
   <div>
-    <button id="topitop" class="text-[2rem] fixed duration-1000 bottom-28 md:bottom-1/3 right-0 md:right-7 transition-all opacity-0" @click="toTop()">∴</button>
+    <button id="topitop" class="text-[2rem] fixed duration-1000 bottom-28 md:bottom-1/3 right-0 md:right-7 transition-all opacity-0 z-50" @click="toTop()">∴</button>
   <SliceZone
     class="pb-9"
     wrapper="main"

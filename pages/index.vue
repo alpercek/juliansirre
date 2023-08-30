@@ -80,7 +80,7 @@ for (let index = 0; index < bottomimage.length; index++) {
 
 <template>
   <div>
-  <button id="topitop" class="text-[2rem] fixed duration-1000 bottom-28 md:bottom-1/3 right-0 md:right-7 transition-all opacity-0" @click="toTop()">∴</button>
+  <button id="topitop" class="text-[2rem] fixed duration-1000 bottom-28 md:bottom-1/3 right-0 md:right-7 transition-all opacity-0 z-50" @click="toTop()">∴</button>
   <div id="enlarge" class="hidden"><div class="fixed inset-0 bg-white opacity-60" onclick="this.parentElement.style.display = 'none'" ></div><img src="" class="opacity-100 w-[500px] fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"> </div>
   <div id="enlargevideo" class="hidden"><div class="fixed inset-0 bg-white opacity-60" onclick="this.parentElement.style.display = 'none'; this.nextElementSibling.pause()" ></div><video controls src=""  class="opacity-100 w-[500px] fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></video> </div>
   <div id="bottomimage" class="fixed bottom-5 left-1/2 -translate-x-1/2 flex h-[30px]"><PrismicImage :field="page.data.bottom_image" class="object-none object-left w-[30px] transition-all opacity-0"/><PrismicImage :field="page.data.bottom_image" class="object-none object-[68%] w-[30px] delay-300 transition-all opacity-0"/><PrismicImage :field="page.data.bottom_image" class="object-none object-right w-[14px] delay-700 transition-all opacity-0"/></div>
