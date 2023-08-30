@@ -803,9 +803,177 @@ export type S404020SliceDefault = prismic.SharedSliceVariation<
 >;
 
 /**
+ * Primary content in *S404020 → Primary*
+ */
+export interface S404020Slice402040Primary {
+  /**
+   * image401 field in *S404020 → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: s404020.primary.image401
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image401: prismic.ImageField<never>;
+
+  /**
+   * title401 field in *S404020 → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: s404020.primary.title401
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  title401: prismic.RichTextField;
+
+  /**
+   * year401 field in *S404020 → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: s404020.primary.year401
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  year401: prismic.RichTextField;
+
+  /**
+   * fig401 field in *S404020 → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: s404020.primary.fig401
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  fig401: prismic.RichTextField;
+
+  /**
+   * link401 field in *S404020 → Primary*
+   *
+   * - **Field Type**: Link to Media
+   * - **Placeholder**: *None*
+   * - **API ID Path**: s404020.primary.link401
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link401: prismic.LinkToMediaField;
+
+  /**
+   * image20 field in *S404020 → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: s404020.primary.image20
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image20: prismic.ImageField<never>;
+
+  /**
+   * title20 field in *S404020 → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: s404020.primary.title20
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  title20: prismic.RichTextField;
+
+  /**
+   * year20 field in *S404020 → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: s404020.primary.year20
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  year20: prismic.RichTextField;
+
+  /**
+   * fig20 field in *S404020 → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: s404020.primary.fig20
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  fig20: prismic.RichTextField;
+
+  /**
+   * link20 field in *S404020 → Primary*
+   *
+   * - **Field Type**: Link to Media
+   * - **Placeholder**: *None*
+   * - **API ID Path**: s404020.primary.link20
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link20: prismic.LinkToMediaField;
+
+  /**
+   * image402 field in *S404020 → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: s404020.primary.image402
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image402: prismic.ImageField<never>;
+
+  /**
+   * title402 field in *S404020 → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: s404020.primary.title402
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  title402: prismic.RichTextField;
+
+  /**
+   * year402 field in *S404020 → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: s404020.primary.year402
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  year402: prismic.RichTextField;
+
+  /**
+   * fig402 field in *S404020 → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: s404020.primary.fig402
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  fig402: prismic.RichTextField;
+
+  /**
+   * link402 field in *S404020 → Primary*
+   *
+   * - **Field Type**: Link to Media
+   * - **Placeholder**: *None*
+   * - **API ID Path**: s404020.primary.link402
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link402: prismic.LinkToMediaField;
+}
+
+/**
+ * 402040 variation for S404020 Slice
+ *
+ * - **API ID**: `402040`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type S404020Slice402040 = prismic.SharedSliceVariation<
+  "402040",
+  Simplify<S404020Slice402040Primary>,
+  never
+>;
+
+/**
  * Slice variation for *S404020*
  */
-type S404020SliceVariation = S404020SliceDefault;
+type S404020SliceVariation = S404020SliceDefault | S404020Slice402040;
 
 /**
  * S404020 Shared Slice
@@ -1170,8 +1338,10 @@ declare module "@prismicio/client" {
       S3366SliceSwappedL66R33,
       S404020Slice,
       S404020SliceDefaultPrimary,
+      S404020Slice402040Primary,
       S404020SliceVariation,
       S404020SliceDefault,
+      S404020Slice402040,
       TextSlice,
       TextSliceDefaultPrimary,
       TextSliceVariation,

@@ -119,6 +119,122 @@
         }
       },
       "items": {}
+    },
+    {
+      "id": "402040",
+      "name": "402040",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "image401": {
+          "type": "Image",
+          "config": { "label": "image401", "constraint": {}, "thumbnails": [] }
+        },
+        "title401": {
+          "type": "StructuredText",
+          "config": {
+            "label": "title401",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "year401": {
+          "type": "StructuredText",
+          "config": {
+            "label": "year401",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "fig401": {
+          "type": "StructuredText",
+          "config": {
+            "label": "fig401",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "link401": {
+          "type": "Link",
+          "config": { "label": "link401", "placeholder": "", "select": "media" }
+        },
+        "image20": {
+          "type": "Image",
+          "config": { "label": "image20", "constraint": {}, "thumbnails": [] }
+        },
+        "title20": {
+          "type": "StructuredText",
+          "config": {
+            "label": "title20",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "year20": {
+          "type": "StructuredText",
+          "config": {
+            "label": "year20",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "fig20": {
+          "type": "StructuredText",
+          "config": {
+            "label": "fig20",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "link20": {
+          "type": "Link",
+          "config": { "label": "link20", "placeholder": "", "select": "media" }
+        },
+        "image402": {
+          "type": "Image",
+          "config": { "label": "image402", "constraint": {}, "thumbnails": [] }
+        },
+        "title402": {
+          "type": "StructuredText",
+          "config": {
+            "label": "title402",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "year402": {
+          "type": "StructuredText",
+          "config": {
+            "label": "year402",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "fig402": {
+          "type": "StructuredText",
+          "config": {
+            "label": "fig402",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "link402": {
+          "type": "Link",
+          "config": { "label": "link402", "placeholder": "", "select": "media" }
+        }
+      },
+      "items": {}
     }
   ]
 }
