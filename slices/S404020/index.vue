@@ -17,9 +17,9 @@ defineProps(
   <div>
   <div class="flex gap-5 pb-5 pl-4 pr-5">
    <div class="w-2/5"> <PrismicImage :field="slice.primary.image401"/> </div>
-   <div class="flex gap-5">
-   <div class="w-2/5"> <PrismicImage :field="slice.primary.image402"/> </div>
-   <div class="w-1/5"> <PrismicImage :field="slice.primary.image20"/> </div>
+   <div class="flex gap-5 w-3/5">
+   <div class="w-4/6"> <PrismicImage :field="slice.primary.image402"/> </div>
+   <div class="w-2/6"> <PrismicImage :field="slice.primary.image20"/> </div>
   </div>
     </div>
   </div>
