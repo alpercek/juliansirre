@@ -19,6 +19,7 @@ useHead({
 
 <template>
   <div>
+    <button id="topitop" class="text-[2rem] fixed duration-1000 bottom-28 md:bottom-1/3 right-0 md:right-7 transition-all opacity-0" @click="toTop()">∴</button>
   <SliceZone
     class="pb-9"
     wrapper="main"
@@ -28,6 +29,15 @@ useHead({
 </template>
 <script lang="ts">
 export default {
+  methods: {
+   toTop() {
+    window.scrollTo({
+  top: 0,
+  left: 0,
+  behavior: "smooth",
+});
+  }
+  },
 mounted(){
   let elements = document.getElementsByClassName('fadelement')
   let bottom
@@ -53,6 +63,21 @@ mounted(){
   
  }
 })
+
+var timer = null
+    document.addEventListener("scroll", function(){ 
+   
+   if (timer !== null) {
+    document.getElementById("topitop")!.style.opacity = "1"
+    clearTimeout(timer)
+   } 
+   timer = setTimeout(function(){
+    document.getElementById("topitop")!.style.opacity = "0"
+   },5000)
+   
+   
+
+}, false);
 }
 }
 </script>
