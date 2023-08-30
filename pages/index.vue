@@ -38,6 +38,9 @@ const { data: page } = useAsyncData("[home]", () =>
   mounted() {
     
   var titles = document.getElementsByTagName("section")
+  if (!titles) {
+    location.reload()
+  }
   for( var i=0; i<titles.length; i++ ) {this.items.push( titles[i].innerHTML );}
   if (window.innerWidth < 1024) {this.items = [...this.items, '']}
   if (window.innerWidth >= 1024) {
