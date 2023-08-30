@@ -31,7 +31,6 @@ export default {
 mounted(){
   let elements = document.getElementsByClassName('fadelement')
   let bottom
-  elements[0].style.opacity = "1"
   if ( window.innerHeight > window.innerWidth ){  bottom = window.innerHeight }
   else { bottom = window.innerHeight+(window.innerHeight/2)}
   for (let index = 0; index < elements.length; index++) {
@@ -57,3 +56,8 @@ mounted(){
 }
 }
 </script>
+<style>
+.fadelement:first-child{
+opacity: 1 !important;
+}
+</style>
