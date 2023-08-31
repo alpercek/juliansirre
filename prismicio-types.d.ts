@@ -205,7 +205,10 @@ export type PageDocument<Lang extends string = string> =
 type SelectedProjectDocumentDataSlicesSlice =
   | S3366Slice
   | S404020Slice
-  | S5050Slice;
+  | S5050Slice
+  | S7525Slice
+  | S25252525Slice
+  | FullwidthSlice;
 
 /**
  * Content for Selected Project documents
@@ -311,6 +314,91 @@ export type AllDocumentTypes =
   | SettingsDocument;
 
 /**
+ * Primary content in *Fullwidth → Primary*
+ */
+export interface FullwidthSliceDefaultPrimary {
+  /**
+   * image field in *Fullwidth → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: fullwidth.primary.image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+
+  /**
+   * title field in *Fullwidth → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: fullwidth.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  title: prismic.RichTextField;
+
+  /**
+   * year field in *Fullwidth → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: fullwidth.primary.year
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  year: prismic.RichTextField;
+
+  /**
+   * fig field in *Fullwidth → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: fullwidth.primary.fig
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  fig: prismic.RichTextField;
+
+  /**
+   * link field in *Fullwidth → Primary*
+   *
+   * - **Field Type**: Link to Media
+   * - **Placeholder**: *None*
+   * - **API ID Path**: fullwidth.primary.link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link: prismic.LinkToMediaField;
+}
+
+/**
+ * Default variation for Fullwidth Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type FullwidthSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<FullwidthSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *Fullwidth*
+ */
+type FullwidthSliceVariation = FullwidthSliceDefault;
+
+/**
+ * Fullwidth Shared Slice
+ *
+ * - **API ID**: `fullwidth`
+ * - **Description**: Fullwidth
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type FullwidthSlice = prismic.SharedSlice<
+  "fullwidth",
+  FullwidthSliceVariation
+>;
+
+/**
  * Primary content in *Image → Primary*
  */
 export interface ImageSliceDefaultPrimary {
@@ -376,6 +464,241 @@ type ImageSliceVariation = ImageSliceDefault;
  * - **Documentation**: https://prismic.io/docs/slice
  */
 export type ImageSlice = prismic.SharedSlice<"image", ImageSliceVariation>;
+
+/**
+ * Primary content in *S25252525 → Primary*
+ */
+export interface S25252525SliceDefaultPrimary {
+  /**
+   * image1 field in *S25252525 → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: s25252525.primary.image1
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image1: prismic.ImageField<never>;
+
+  /**
+   * title1 field in *S25252525 → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: s25252525.primary.title1
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  title1: prismic.RichTextField;
+
+  /**
+   * year1 field in *S25252525 → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: s25252525.primary.year1
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  year1: prismic.RichTextField;
+
+  /**
+   * fig1 field in *S25252525 → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: s25252525.primary.fig1
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  fig1: prismic.RichTextField;
+
+  /**
+   * link1 field in *S25252525 → Primary*
+   *
+   * - **Field Type**: Link to Media
+   * - **Placeholder**: *None*
+   * - **API ID Path**: s25252525.primary.link1
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link1: prismic.LinkToMediaField;
+
+  /**
+   * image2 field in *S25252525 → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: s25252525.primary.image2
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image2: prismic.ImageField<never>;
+
+  /**
+   * title2 field in *S25252525 → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: s25252525.primary.title2
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  title2: prismic.RichTextField;
+
+  /**
+   * year2 field in *S25252525 → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: s25252525.primary.year2
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  year2: prismic.RichTextField;
+
+  /**
+   * fig2 field in *S25252525 → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: s25252525.primary.fig2
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  fig2: prismic.RichTextField;
+
+  /**
+   * link2 field in *S25252525 → Primary*
+   *
+   * - **Field Type**: Link to Media
+   * - **Placeholder**: *None*
+   * - **API ID Path**: s25252525.primary.link2
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link2: prismic.LinkToMediaField;
+
+  /**
+   * image3 field in *S25252525 → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: s25252525.primary.image3
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image3: prismic.ImageField<never>;
+
+  /**
+   * title3 field in *S25252525 → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: s25252525.primary.title3
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  title3: prismic.RichTextField;
+
+  /**
+   * year3 field in *S25252525 → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: s25252525.primary.year3
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  year3: prismic.RichTextField;
+
+  /**
+   * fig3 field in *S25252525 → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: s25252525.primary.fig3
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  fig3: prismic.RichTextField;
+
+  /**
+   * link3 field in *S25252525 → Primary*
+   *
+   * - **Field Type**: Link to Media
+   * - **Placeholder**: *None*
+   * - **API ID Path**: s25252525.primary.link3
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link3: prismic.LinkToMediaField;
+
+  /**
+   * image4 field in *S25252525 → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: s25252525.primary.image4
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image4: prismic.ImageField<never>;
+
+  /**
+   * title4 field in *S25252525 → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: s25252525.primary.title4
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  title4: prismic.RichTextField;
+
+  /**
+   * year4 field in *S25252525 → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: s25252525.primary.year4
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  year4: prismic.RichTextField;
+
+  /**
+   * fig4 field in *S25252525 → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: s25252525.primary.fig4
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  fig4: prismic.RichTextField;
+
+  /**
+   * link4 field in *S25252525 → Primary*
+   *
+   * - **Field Type**: Link to Media
+   * - **Placeholder**: *None*
+   * - **API ID Path**: s25252525.primary.link4
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link4: prismic.LinkToMediaField;
+}
+
+/**
+ * Default variation for S25252525 Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type S25252525SliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<S25252525SliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *S25252525*
+ */
+type S25252525SliceVariation = S25252525SliceDefault;
+
+/**
+ * S25252525 Shared Slice
+ *
+ * - **API ID**: `s25252525`
+ * - **Description**: S25252525
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type S25252525Slice = prismic.SharedSlice<
+  "s25252525",
+  S25252525SliceVariation
+>;
 
 /**
  * Primary content in *S3366 → Primary*
@@ -1116,7 +1439,7 @@ export type S5050SliceDefault = prismic.SharedSliceVariation<
 /**
  * Primary content in *S5050 → Primary*
  */
-export interface S5050SliceSliderOnTheRightPrimary {
+export interface S5050SliceSliderOnTheLeftPrimary {
   /**
    * image1 field in *S5050 → Primary*
    *
@@ -1181,7 +1504,7 @@ export interface S5050SliceSliderOnTheRightPrimary {
 /**
  * Primary content in *S5050 → Items*
  */
-export interface S5050SliceSliderOnTheRightItem {
+export interface S5050SliceSliderOnTheLeftItem {
   /**
    * image2 field in *S5050 → Items*
    *
@@ -1224,22 +1547,22 @@ export interface S5050SliceSliderOnTheRightItem {
 }
 
 /**
- * Slider on the right variation for S5050 Slice
+ * Slider on the left variation for S5050 Slice
  *
- * - **API ID**: `sliderOnTheRight`
+ * - **API ID**: `sliderOnTheLeft`
  * - **Description**: Default
  * - **Documentation**: https://prismic.io/docs/slice
  */
-export type S5050SliceSliderOnTheRight = prismic.SharedSliceVariation<
-  "sliderOnTheRight",
-  Simplify<S5050SliceSliderOnTheRightPrimary>,
-  Simplify<S5050SliceSliderOnTheRightItem>
+export type S5050SliceSliderOnTheLeft = prismic.SharedSliceVariation<
+  "sliderOnTheLeft",
+  Simplify<S5050SliceSliderOnTheLeftPrimary>,
+  Simplify<S5050SliceSliderOnTheLeftItem>
 >;
 
 /**
  * Slice variation for *S5050*
  */
-type S5050SliceVariation = S5050SliceDefault | S5050SliceSliderOnTheRight;
+type S5050SliceVariation = S5050SliceDefault | S5050SliceSliderOnTheLeft;
 
 /**
  * S5050 Shared Slice
@@ -1249,6 +1572,266 @@ type S5050SliceVariation = S5050SliceDefault | S5050SliceSliderOnTheRight;
  * - **Documentation**: https://prismic.io/docs/slice
  */
 export type S5050Slice = prismic.SharedSlice<"s5050", S5050SliceVariation>;
+
+/**
+ * Primary content in *S7525 → Primary*
+ */
+export interface S7525SliceDefaultPrimary {
+  /**
+   * image25 field in *S7525 → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: s7525.primary.image1
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image1: prismic.ImageField<never>;
+
+  /**
+   * title25 field in *S7525 → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: s7525.primary.title1
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  title1: prismic.RichTextField;
+
+  /**
+   * year25 field in *S7525 → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: s7525.primary.year1
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  year1: prismic.RichTextField;
+
+  /**
+   * fig25 field in *S7525 → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: s7525.primary.fig1
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  fig1: prismic.RichTextField;
+
+  /**
+   * link25 field in *S7525 → Primary*
+   *
+   * - **Field Type**: Link to Media
+   * - **Placeholder**: *None*
+   * - **API ID Path**: s7525.primary.link1
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link1: prismic.LinkToMediaField;
+
+  /**
+   * link75 field in *S7525 → Primary*
+   *
+   * - **Field Type**: Link to Media
+   * - **Placeholder**: *None*
+   * - **API ID Path**: s7525.primary.link2
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link2: prismic.LinkToMediaField;
+}
+
+/**
+ * Primary content in *S7525 → Items*
+ */
+export interface S7525SliceDefaultItem {
+  /**
+   * image75 field in *S7525 → Items*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: s7525.items[].image2
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image2: prismic.ImageField<never>;
+
+  /**
+   * title75 field in *S7525 → Items*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: s7525.items[].title2
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  title2: prismic.RichTextField;
+
+  /**
+   * year75 field in *S7525 → Items*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: s7525.items[].year2
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  year2: prismic.RichTextField;
+
+  /**
+   * fig75 field in *S7525 → Items*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: s7525.items[].fig2
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  fig2: prismic.RichTextField;
+}
+
+/**
+ * Default variation for S7525 Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type S7525SliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<S7525SliceDefaultPrimary>,
+  Simplify<S7525SliceDefaultItem>
+>;
+
+/**
+ * Primary content in *S7525 → Primary*
+ */
+export interface S7525Slice75OnTheLeftPrimary {
+  /**
+   * image25 field in *S7525 → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: s7525.primary.image1
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image1: prismic.ImageField<never>;
+
+  /**
+   * title25 field in *S7525 → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: s7525.primary.title1
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  title1: prismic.RichTextField;
+
+  /**
+   * year25 field in *S7525 → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: s7525.primary.year1
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  year1: prismic.RichTextField;
+
+  /**
+   * fig25 field in *S7525 → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: s7525.primary.fig1
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  fig1: prismic.RichTextField;
+
+  /**
+   * link25 field in *S7525 → Primary*
+   *
+   * - **Field Type**: Link to Media
+   * - **Placeholder**: *None*
+   * - **API ID Path**: s7525.primary.link1
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link1: prismic.LinkToMediaField;
+
+  /**
+   * link75 field in *S7525 → Primary*
+   *
+   * - **Field Type**: Link to Media
+   * - **Placeholder**: *None*
+   * - **API ID Path**: s7525.primary.link2
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link2: prismic.LinkToMediaField;
+}
+
+/**
+ * Primary content in *S7525 → Items*
+ */
+export interface S7525Slice75OnTheLeftItem {
+  /**
+   * image75 field in *S7525 → Items*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: s7525.items[].image2
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image2: prismic.ImageField<never>;
+
+  /**
+   * title75 field in *S7525 → Items*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: s7525.items[].title2
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  title2: prismic.RichTextField;
+
+  /**
+   * year75 field in *S7525 → Items*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: s7525.items[].year2
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  year2: prismic.RichTextField;
+
+  /**
+   * fig75 field in *S7525 → Items*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: s7525.items[].fig2
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  fig2: prismic.RichTextField;
+}
+
+/**
+ * 75 on the left variation for S7525 Slice
+ *
+ * - **API ID**: `75OnTheLeft`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type S7525Slice75OnTheLeft = prismic.SharedSliceVariation<
+  "75OnTheLeft",
+  Simplify<S7525Slice75OnTheLeftPrimary>,
+  Simplify<S7525Slice75OnTheLeftItem>
+>;
+
+/**
+ * Slice variation for *S7525*
+ */
+type S7525SliceVariation = S7525SliceDefault | S7525Slice75OnTheLeft;
+
+/**
+ * S7525 Shared Slice
+ *
+ * - **API ID**: `s7525`
+ * - **Description**: S7525
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type S7525Slice = prismic.SharedSlice<"s7525", S7525SliceVariation>;
 
 /**
  * Primary content in *Text → Primary*
@@ -1586,11 +2169,19 @@ declare module "@prismicio/client" {
       SettingsDocument,
       SettingsDocumentData,
       AllDocumentTypes,
+      FullwidthSlice,
+      FullwidthSliceDefaultPrimary,
+      FullwidthSliceVariation,
+      FullwidthSliceDefault,
       ImageSlice,
       ImageSliceDefaultPrimary,
       ImageSliceDefaultItem,
       ImageSliceVariation,
       ImageSliceDefault,
+      S25252525Slice,
+      S25252525SliceDefaultPrimary,
+      S25252525SliceVariation,
+      S25252525SliceDefault,
       S3366Slice,
       S3366SliceDefaultPrimary,
       S3366SliceDefaultItem,
@@ -1608,11 +2199,19 @@ declare module "@prismicio/client" {
       S5050Slice,
       S5050SliceDefaultPrimary,
       S5050SliceDefaultItem,
-      S5050SliceSliderOnTheRightPrimary,
-      S5050SliceSliderOnTheRightItem,
+      S5050SliceSliderOnTheLeftPrimary,
+      S5050SliceSliderOnTheLeftItem,
       S5050SliceVariation,
       S5050SliceDefault,
-      S5050SliceSliderOnTheRight,
+      S5050SliceSliderOnTheLeft,
+      S7525Slice,
+      S7525SliceDefaultPrimary,
+      S7525SliceDefaultItem,
+      S7525Slice75OnTheLeftPrimary,
+      S7525Slice75OnTheLeftItem,
+      S7525SliceVariation,
+      S7525SliceDefault,
+      S7525Slice75OnTheLeft,
       TextSlice,
       TextSliceDefaultPrimary,
       TextSliceVariation,

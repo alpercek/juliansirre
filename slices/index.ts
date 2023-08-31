@@ -4,10 +4,13 @@ import { defineAsyncComponent } from "vue";
 import { defineSliceZoneComponents } from "@prismicio/vue";
 
 export const components = defineSliceZoneComponents({
+  fullwidth: defineAsyncComponent(() => import("./Fullwidth/index.vue")),
   image: defineAsyncComponent(() => import("./Image/index.vue")),
+  s25252525: defineAsyncComponent(() => import("./S25252525/index.vue")),
   s3366: defineAsyncComponent(() => import("./S3366/index.vue")),
   s404020: defineAsyncComponent(() => import("./S404020/index.vue")),
   s5050: defineAsyncComponent(() => import("./S5050/index.vue")),
+  s7525: defineAsyncComponent(() => import("./S7525/index.vue")),
   text: defineAsyncComponent(() => import("./Text/index.vue")),
   text_with_image: defineAsyncComponent(
     () => import("./TextWithImage/index.vue")

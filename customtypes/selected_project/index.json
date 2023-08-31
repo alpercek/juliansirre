@@ -13,7 +13,10 @@
           "choices": {
             "s3366": { "type": "SharedSlice" },
             "s404020": { "type": "SharedSlice" },
-            "s5050": { "type": "SharedSlice" }
+            "s5050": { "type": "SharedSlice" },
+            "s7525": { "type": "SharedSlice" },
+            "s25252525": { "type": "SharedSlice" },
+            "fullwidth": { "type": "SharedSlice" }
           }
         }
       }

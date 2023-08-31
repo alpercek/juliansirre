@@ -1,0 +1,172 @@
+{
+  "id": "s7525",
+  "type": "SharedSlice",
+  "name": "S7525",
+  "description": "S7525",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "image1": {
+          "type": "Image",
+          "config": { "label": "image25", "constraint": {}, "thumbnails": [] }
+        },
+        "title1": {
+          "type": "StructuredText",
+          "config": {
+            "label": "title25",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "year1": {
+          "type": "StructuredText",
+          "config": {
+            "label": "year25",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "fig1": {
+          "type": "StructuredText",
+          "config": {
+            "label": "fig25",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "link1": {
+          "type": "Link",
+          "config": { "label": "link25", "placeholder": "", "select": "media" }
+        },
+        "link2": {
+          "type": "Link",
+          "config": { "label": "link75", "placeholder": "", "select": "media" }
+        }
+      },
+      "items": {
+        "image2": {
+          "type": "Image",
+          "config": { "label": "image75", "constraint": {}, "thumbnails": [] }
+        },
+        "title2": {
+          "type": "StructuredText",
+          "config": {
+            "label": "title75",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "year2": {
+          "type": "StructuredText",
+          "config": {
+            "label": "year75",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "fig2": {
+          "type": "StructuredText",
+          "config": {
+            "label": "fig75",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        }
+      }
+    },
+    {
+      "id": "75OnTheLeft",
+      "name": "75 on the left",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "image1": {
+          "type": "Image",
+          "config": { "label": "image25", "constraint": {}, "thumbnails": [] }
+        },
+        "title1": {
+          "type": "StructuredText",
+          "config": {
+            "label": "title25",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "year1": {
+          "type": "StructuredText",
+          "config": {
+            "label": "year25",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "fig1": {
+          "type": "StructuredText",
+          "config": {
+            "label": "fig25",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "link1": {
+          "type": "Link",
+          "config": { "label": "link25", "placeholder": "", "select": "media" }
+        },
+        "link2": {
+          "type": "Link",
+          "config": { "label": "link75", "placeholder": "", "select": "media" }
+        }
+      },
+      "items": {
+        "image2": {
+          "type": "Image",
+          "config": { "label": "image75", "constraint": {}, "thumbnails": [] }
+        },
+        "title2": {
+          "type": "StructuredText",
+          "config": {
+            "label": "title75",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "year2": {
+          "type": "StructuredText",
+          "config": {
+            "label": "year75",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "fig2": {
+          "type": "StructuredText",
+          "config": {
+            "label": "fig75",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        }
+      }
+    }
+  ]
+}
