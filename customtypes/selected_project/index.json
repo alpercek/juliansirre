@@ -12,7 +12,8 @@
         "config": {
           "choices": {
             "s3366": { "type": "SharedSlice" },
-            "s404020": { "type": "SharedSlice" }
+            "s404020": { "type": "SharedSlice" },
+            "s5050": { "type": "SharedSlice" }
           }
         }
       }
