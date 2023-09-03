@@ -15,7 +15,7 @@ defineProps(
 
 <template>
  <div class="transition-all opacity-0 fadelement">
-  <div class="flex gap-5 pb-5">
+  <div :class="{'pl-4 pr-5': slice.variation === 'paddingOnTheSides'}" class="flex gap-5 pb-5">
    <div class="w-full"> <PrismicImage :field="slice.primary.image"/> </div>
     </div>
   </div>

@@ -382,9 +382,79 @@ export type FullwidthSliceDefault = prismic.SharedSliceVariation<
 >;
 
 /**
+ * Primary content in *Fullwidth → Primary*
+ */
+export interface FullwidthSlicePaddingOnTheSidesPrimary {
+  /**
+   * image field in *Fullwidth → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: fullwidth.primary.image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+
+  /**
+   * title field in *Fullwidth → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: fullwidth.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  title: prismic.RichTextField;
+
+  /**
+   * year field in *Fullwidth → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: fullwidth.primary.year
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  year: prismic.RichTextField;
+
+  /**
+   * fig field in *Fullwidth → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: fullwidth.primary.fig
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  fig: prismic.RichTextField;
+
+  /**
+   * link field in *Fullwidth → Primary*
+   *
+   * - **Field Type**: Link to Media
+   * - **Placeholder**: *None*
+   * - **API ID Path**: fullwidth.primary.link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link: prismic.LinkToMediaField;
+}
+
+/**
+ * Padding on the sides variation for Fullwidth Slice
+ *
+ * - **API ID**: `paddingOnTheSides`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type FullwidthSlicePaddingOnTheSides = prismic.SharedSliceVariation<
+  "paddingOnTheSides",
+  Simplify<FullwidthSlicePaddingOnTheSidesPrimary>,
+  never
+>;
+
+/**
  * Slice variation for *Fullwidth*
  */
-type FullwidthSliceVariation = FullwidthSliceDefault;
+type FullwidthSliceVariation =
+  | FullwidthSliceDefault
+  | FullwidthSlicePaddingOnTheSides;
 
 /**
  * Fullwidth Shared Slice
@@ -2171,8 +2241,10 @@ declare module "@prismicio/client" {
       AllDocumentTypes,
       FullwidthSlice,
       FullwidthSliceDefaultPrimary,
+      FullwidthSlicePaddingOnTheSidesPrimary,
       FullwidthSliceVariation,
       FullwidthSliceDefault,
+      FullwidthSlicePaddingOnTheSides,
       ImageSlice,
       ImageSliceDefaultPrimary,
       ImageSliceDefaultItem,
