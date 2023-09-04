@@ -16,20 +16,27 @@ defineProps(
 </script>
 
 <template>
-  <div :class="{'flex-row-reverse': slice.variation === 'swappedL66R33'}" class="flex pb-5 pl-4 pr-5 gap-5 fadelement transition-all opacity-0">
-    <div class="w-1/3">
-  <PrismicImage :field="slice.primary.l33"/>
+  <div :class="{'flex-row-reverse': slice.variation === 'swappedL66R33'}" class="flex pb-5 pl-4 pr-5 gap-5 duration-300 fadelement transition-all opacity-0">
+    <div class="w-1/3 group/edit">
+  <PrismicImage :field="slice.primary.l33" class="w-screen"/>
+  <div class="group-hover/edit:opacity-100 opacity-0 transition-all flex font-metrik text-[0.625rem] pt-1.5 pr-6 justify-end"><PrismicRichText :field="slice.primary.title"/>&nbsp;<PrismicRichText :field="slice.primary.year"/>&nbsp;<PrismicRichText :field="slice.primary.fig"/></div> 
     </div>
-  <carousel v-if="slice.items.length > 1" :wrapAround="true" class="w-2/3 group">
+    <div class="group/item w-2/3">
+  <carousel v-if="slice.items.length > 1" :wrapAround="true" class="w-full">
     <slide v-for="(item, i) in slice.items" :key="`slice-item-${i}`">
-      <PrismicImage :field="item.r66" />
+      <div><PrismicImage :field="item.r66" class="w-screen"/>
+        <div class="group-hover/item:opacity-100 opacity-0 transition-all flex font-metrik text-[0.625rem] pt-1.5 pr-6 justify-end"><PrismicRichText :field="item.title"/>&nbsp;<PrismicRichText :field="item.year"/>&nbsp;<PrismicRichText :field="item.fig"/></div> 
+        </div>
     </slide>
 
     <template #addons>
-      <navigation class="group-hover:opacity-100 opacity-0 transition-all"/>
+      <navigation class="group-hover/item:opacity-100 opacity-0 transition-all"/>
     </template>
   </carousel>
-  <div v-else class="w-2/3"><PrismicImage :field="slice.items[0].r66"/></div>
+  <div v-else class="w-full"><PrismicImage :field="slice.items[0].r66" class="w-screen"/>
+    <div class="group-hover/item:opacity-100 opacity-0 transition-all flex font-metrik text-[0.625rem] pt-1.5 pr-6 justify-end"><PrismicRichText :field="slice.items[0].title"/>&nbsp;<PrismicRichText :field="slice.items[0].year"/>&nbsp;<PrismicRichText :field="slice.items[0].fig"/></div> 
+  </div>
+</div>
   </div>
 </template>
 <script lang="ts">
@@ -56,15 +63,15 @@ export default {
     border-width: 0 3px 3px 0;
     display: inline-block;
     padding: 9px;
-    transform: rotate(-45deg);
-    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg) translate(-20px, -20px);
+    -webkit-transform: rotate(-45deg) translate(-20px, -20px);
 }
 .carousel__prev{
   border: solid;
     border-width: 0 3px 3px 0;
     display: inline-block;
     padding: 9px;
-    transform: rotate(135deg);
-    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg) translate(-20px, -20px);
+    -webkit-transform: rotate(135deg) translate(-20px, -20px);
 }
 </style>

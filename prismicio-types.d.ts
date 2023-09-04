@@ -314,55 +314,55 @@ export type AllDocumentTypes =
   | SettingsDocument;
 
 /**
- * Primary content in *Fullwidth → Primary*
+ * Primary content in *Fullwidth → Items*
  */
-export interface FullwidthSliceDefaultPrimary {
+export interface FullwidthSliceDefaultItem {
   /**
-   * image field in *Fullwidth → Primary*
+   * image field in *Fullwidth → Items*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
-   * - **API ID Path**: fullwidth.primary.image
+   * - **API ID Path**: fullwidth.items[].image
    * - **Documentation**: https://prismic.io/docs/field#image
    */
   image: prismic.ImageField<never>;
 
   /**
-   * title field in *Fullwidth → Primary*
+   * title field in *Fullwidth → Items*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: fullwidth.primary.title
+   * - **API ID Path**: fullwidth.items[].title
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
   title: prismic.RichTextField;
 
   /**
-   * year field in *Fullwidth → Primary*
+   * year field in *Fullwidth → Items*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: fullwidth.primary.year
+   * - **API ID Path**: fullwidth.items[].year
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
   year: prismic.RichTextField;
 
   /**
-   * fig field in *Fullwidth → Primary*
+   * fig field in *Fullwidth → Items*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: fullwidth.primary.fig
+   * - **API ID Path**: fullwidth.items[].fig
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
   fig: prismic.RichTextField;
 
   /**
-   * link field in *Fullwidth → Primary*
+   * link field in *Fullwidth → Items*
    *
    * - **Field Type**: Link to Media
    * - **Placeholder**: *None*
-   * - **API ID Path**: fullwidth.primary.link
+   * - **API ID Path**: fullwidth.items[].link
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
   link: prismic.LinkToMediaField;
@@ -377,60 +377,60 @@ export interface FullwidthSliceDefaultPrimary {
  */
 export type FullwidthSliceDefault = prismic.SharedSliceVariation<
   "default",
-  Simplify<FullwidthSliceDefaultPrimary>,
-  never
+  Record<string, never>,
+  Simplify<FullwidthSliceDefaultItem>
 >;
 
 /**
- * Primary content in *Fullwidth → Primary*
+ * Primary content in *Fullwidth → Items*
  */
-export interface FullwidthSlicePaddingOnTheSidesPrimary {
+export interface FullwidthSlicePaddingOnTheSidesItem {
   /**
-   * image field in *Fullwidth → Primary*
+   * image field in *Fullwidth → Items*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
-   * - **API ID Path**: fullwidth.primary.image
+   * - **API ID Path**: fullwidth.items[].image
    * - **Documentation**: https://prismic.io/docs/field#image
    */
   image: prismic.ImageField<never>;
 
   /**
-   * title field in *Fullwidth → Primary*
+   * title field in *Fullwidth → Items*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: fullwidth.primary.title
+   * - **API ID Path**: fullwidth.items[].title
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
   title: prismic.RichTextField;
 
   /**
-   * year field in *Fullwidth → Primary*
+   * year field in *Fullwidth → Items*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: fullwidth.primary.year
+   * - **API ID Path**: fullwidth.items[].year
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
   year: prismic.RichTextField;
 
   /**
-   * fig field in *Fullwidth → Primary*
+   * fig field in *Fullwidth → Items*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: fullwidth.primary.fig
+   * - **API ID Path**: fullwidth.items[].fig
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
   fig: prismic.RichTextField;
 
   /**
-   * link field in *Fullwidth → Primary*
+   * link field in *Fullwidth → Items*
    *
    * - **Field Type**: Link to Media
    * - **Placeholder**: *None*
-   * - **API ID Path**: fullwidth.primary.link
+   * - **API ID Path**: fullwidth.items[].link
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
   link: prismic.LinkToMediaField;
@@ -445,8 +445,8 @@ export interface FullwidthSlicePaddingOnTheSidesPrimary {
  */
 export type FullwidthSlicePaddingOnTheSides = prismic.SharedSliceVariation<
   "paddingOnTheSides",
-  Simplify<FullwidthSlicePaddingOnTheSidesPrimary>,
-  never
+  Record<string, never>,
+  Simplify<FullwidthSlicePaddingOnTheSidesItem>
 >;
 
 /**
@@ -2240,8 +2240,8 @@ declare module "@prismicio/client" {
       SettingsDocumentData,
       AllDocumentTypes,
       FullwidthSlice,
-      FullwidthSliceDefaultPrimary,
-      FullwidthSlicePaddingOnTheSidesPrimary,
+      FullwidthSliceDefaultItem,
+      FullwidthSlicePaddingOnTheSidesItem,
       FullwidthSliceVariation,
       FullwidthSliceDefault,
       FullwidthSlicePaddingOnTheSides,
