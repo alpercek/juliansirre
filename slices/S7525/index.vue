@@ -16,7 +16,7 @@ defineProps(
 </script>
 
 <template>
-  <div :class="{'flex-row-reverse': slice.variation === '75OnTheLeft'}" class="flex pb-5 pl-4 pr-5 gap-5 duration-300 fadelement transition-all opacity-0">
+  <div :class="{'flex-row-reverse': slice.variation === '75OnTheLeft'}" class="flex pb-5 pl-4 pr-5 gap-5 duration-500 delay-300 fadelement transition-all opacity-0">
     <div class="w-1/4 group/edit">
   <PrismicImage :field="slice.primary.image25" class="w-screen"/>
   <div class="group-hover/edit:opacity-100 opacity-0 transition-all flex font-metrik text-[0.625rem] pt-1.5 pr-6 justify-end"><PrismicRichText :field="slice.primary.title25"/>&nbsp;<PrismicRichText :field="slice.primary.year25"/>&nbsp;<PrismicRichText :field="slice.primary.fig25"/></div> 

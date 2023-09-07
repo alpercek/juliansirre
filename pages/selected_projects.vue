@@ -40,11 +40,9 @@ export default {
   },
 mounted(){
   let elements = document.getElementsByClassName('fadelement')
-  let bottom
-  if ( window.innerHeight > window.innerWidth ){  bottom = window.innerHeight }
-  else { bottom = window.innerHeight+(window.innerHeight/2)}
+  let bottom = window.innerHeight + 20
   for (let index = 0; index < elements.length; index++) {
-  if (elements[index].getBoundingClientRect().bottom < bottom) {
+  if (elements[index].getBoundingClientRect().top < bottom) {
     elements[index].style.opacity = "1"
   }
   else{
@@ -54,7 +52,7 @@ mounted(){
  }
  document.addEventListener('scroll', function checkfade(){
  for (let index = 0; index < elements.length; index++) {
-  if (elements[index].getBoundingClientRect().bottom < bottom) {
+  if (elements[index].getBoundingClientRect().top < bottom) {
     elements[index].style.opacity = "1"
   }
   else{

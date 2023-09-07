@@ -14,7 +14,7 @@ defineProps(
 </script>
 
 <template>
-  <div class="transition-all opacity-0 duration-300 fadelement">
+  <div class="transition-all opacity-0 duration-500 delay-300 fadelement">
   <div class="flex gap-5 pb-5 pl-4 pr-5">
    <div class="w-2/5 group/item"> <PrismicImage :field="slice.primary.image401" class="w-screen"/> 
     <div class="group-hover/item:opacity-100 opacity-0 transition-all flex font-metrik text-[0.625rem] pt-1.5 pr-6 justify-end"><PrismicRichText :field="slice.primary.title401"/>&nbsp;<PrismicRichText :field="slice.primary.year401"/>&nbsp;<PrismicRichText :field="slice.primary.fig401"/></div> 

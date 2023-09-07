@@ -16,7 +16,7 @@ defineProps(
 </script>
 
 <template>
-  <div :class="{' pr-5 pl-4': slice.variation === 'paddingOnTheSides'}" class="flex pb-5 gap-5 group fadelement duration-300 transition-all opacity-0">
+  <div :class="{' pr-5 pl-4': slice.variation === 'paddingOnTheSides'}" class="flex pb-5 gap-5 group fadelement duration-500 delay-300 transition-all opacity-0">
   <carousel v-if="slice.items.length > 1" :wrapAround="true" :autoplay="5000"  class="w-screen">
     <slide v-for="(item, i) in slice.items" :key="`slice-item-${i}`">
       <div><PrismicImage :field="item.image" class="w-screen"/>
