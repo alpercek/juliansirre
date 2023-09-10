@@ -37,6 +37,7 @@ defineProps(
     <div class="group-hover/item:opacity-100 opacity-0 transition-all flex font-metrik text-[0.625rem] pt-1.5 pr-6 justify-end"><PrismicRichText :field="slice.items[0].title75"/>&nbsp;<PrismicRichText :field="slice.items[0].year75"/>&nbsp;<PrismicRichText :field="slice.items[0].fig75"/></div> 
   </div>
 </div>
+</div>
 </template>
 <script lang="ts">
 export default {
