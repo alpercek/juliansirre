@@ -2,7 +2,15 @@
 	{
 		"__TYPE__": "SharedSliceContent",
 		"variation": "default",
-		"primary": {},
+		"primary": {
+			"link": {
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "https://prismic.io"
+				}
+			}
+		},
 		"items": [
 			{
 				"__TYPE__": "GroupItemContent",
@@ -74,20 +82,6 @@
 								}
 							]
 						}
-					],
-					[
-						"link",
-						{
-							"__TYPE__": "LinkContent",
-							"value": {
-								"id": "mock_Media_link",
-								"kind": "image/jpeg",
-								"name": "mock_name",
-								"url": "https://source.unsplash.com/daily",
-								"size": "0",
-								"__TYPE__": "FileLink"
-							}
-						}
 					]
 				]
 			}
@@ -104,7 +98,6 @@
 					[
 						"image",
 						{
-							"__TYPE__": "ImageContent",
 							"origin": {
 								"id": "main",
 								"url": "https://images.unsplash.com/photo-1537498425277-c283d32ef9db",
@@ -122,6 +115,9 @@
 								},
 								"background": "transparent"
 							},
+							"credits": null,
+							"alt": null,
+							"__TYPE__": "ImageContent",
 							"thumbnails": {}
 						}
 					],

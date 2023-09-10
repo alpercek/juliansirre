@@ -16,6 +16,7 @@ defineProps(
 </script>
 
 <template>
+  <PrismicLink :field="slice.primary.link">
   <div :class="{' pr-5 pl-4': slice.variation === 'paddingOnTheSides'}" class="flex pb-5 gap-5 group fadelement duration-500 delay-300 transition-all opacity-0">
   <carousel v-if="slice.items.length > 1" :wrapAround="true" :autoplay="5000"  class="w-screen">
     <slide v-for="(item, i) in slice.items" :key="`slice-item-${i}`">
@@ -33,6 +34,7 @@ defineProps(
    <div class="group-hover:opacity-100 opacity-0 transition-all flex font-metrik text-[0.625rem] pt-1.5 pr-6 justify-end"><PrismicRichText :field="slice.items[0].title"/>&nbsp;<PrismicRichText :field="slice.items[0].year"/>&nbsp;<PrismicRichText :field="slice.items[0].fig"/></div> 
   </div>
   </div>
+  </PrismicLink>
 </template>
 <script lang="ts">
 export default {

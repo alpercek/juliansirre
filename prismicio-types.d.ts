@@ -314,6 +314,21 @@ export type AllDocumentTypes =
   | SettingsDocument;
 
 /**
+ * Primary content in *Fullwidth → Primary*
+ */
+export interface FullwidthSliceDefaultPrimary {
+  /**
+   * link field in *Fullwidth → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: fullwidth.primary.link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link: prismic.LinkField;
+}
+
+/**
  * Primary content in *Fullwidth → Items*
  */
 export interface FullwidthSliceDefaultItem {
@@ -356,16 +371,6 @@ export interface FullwidthSliceDefaultItem {
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
   fig: prismic.RichTextField;
-
-  /**
-   * link field in *Fullwidth → Items*
-   *
-   * - **Field Type**: Link to Media
-   * - **Placeholder**: *None*
-   * - **API ID Path**: fullwidth.items[].link
-   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
-   */
-  link: prismic.LinkToMediaField;
 }
 
 /**
@@ -377,7 +382,7 @@ export interface FullwidthSliceDefaultItem {
  */
 export type FullwidthSliceDefault = prismic.SharedSliceVariation<
   "default",
-  Record<string, never>,
+  Simplify<FullwidthSliceDefaultPrimary>,
   Simplify<FullwidthSliceDefaultItem>
 >;
 
@@ -2240,6 +2245,7 @@ declare module "@prismicio/client" {
       SettingsDocumentData,
       AllDocumentTypes,
       FullwidthSlice,
+      FullwidthSliceDefaultPrimary,
       FullwidthSliceDefaultItem,
       FullwidthSlicePaddingOnTheSidesItem,
       FullwidthSliceVariation,
