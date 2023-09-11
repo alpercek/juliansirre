@@ -150,12 +150,65 @@ interface HomeDocumentData {
 export type HomeDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithoutUID<Simplify<HomeDocumentData>, "home", Lang>;
 
-type PageDocumentDataSlicesSlice = TextSlice | ImageSlice | TextWithImageSlice;
+/**
+ * Item in *Page → Slider*
+ */
+export interface PageDocumentDataSliderItem {
+  /**
+   * image field in *Page → Slider*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: page.slider[].image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+
+  /**
+   * fig field in *Page → Slider*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: page.slider[].fig
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  fig: prismic.RichTextField;
+}
+
+type PageDocumentDataSlicesSlice =
+  | S7525Slice
+  | S3366Slice
+  | S404020Slice
+  | S5050Slice
+  | S25252525Slice
+  | FullwidthSlice;
 
 /**
  * Content for Page documents
  */
 interface PageDocumentData {
+  /**
+   * Parent field in *Page*
+   *
+   * - **Field Type**: Content Relationship
+   * - **Placeholder**: *None*
+   * - **API ID Path**: page.parent
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  parent: prismic.ContentRelationshipField<"page">;
+
+  /**
+   * Slider field in *Page*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: page.slider[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  slider: prismic.GroupField<Simplify<PageDocumentDataSliderItem>>;
+
   /**
    * Title field in *Page*
    *
@@ -168,15 +221,48 @@ interface PageDocumentData {
   title: prismic.TitleField;
 
   /**
-   * Parent field in *Page*
+   * size field in *Page*
    *
-   * - **Field Type**: Content Relationship
+   * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: page.parent
+   * - **API ID Path**: page.size
    * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
-  parent: prismic.ContentRelationshipField<"page">;
+  size: prismic.RichTextField;
+
+  /**
+   * year field in *Page*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: page.year
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  year: prismic.RichTextField;
+
+  /**
+   * media field in *Page*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: page.media
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  media: prismic.RichTextField;
+
+  /**
+   * extrainfo field in *Page*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: page.extrainfo
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  extrainfo: prismic.RichTextField;
 
   /**
    * Slice Zone field in *Page*
