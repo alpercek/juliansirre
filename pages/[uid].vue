@@ -9,7 +9,6 @@ const { data: page } = useAsyncData('[uid]', () =>
   prismic.client.getByUID('page', route.params.uid as string || 'home')
 )
 const settings = useSettings()
-
 useHead({
   title: computed(() => `${prismic.asText(page.value?.data.title)} | ${prismic.asText(settings.value?.data.siteTitle)}`)
 })
@@ -19,17 +18,17 @@ useHead({
 <template>
   <div>
     <button id="topitop" class="text-[2rem] fixed duration-1000 bottom-28 md:bottom-1/3 right-0 md:right-7 transition-all opacity-0 z-50" @click="toTop()">∴</button>
-   <carousel v-if="page?.data.slider.length > 1" :wrapAround="true" :autoplay="5000" :itemsToShow="1.5" :snapAlign="'start'" class="w-screen">
-    <slide v-for="(item, i) in page?.data.slider" :key="`page?.data.slider-${i}`" class="">
-      <div><PrismicImage :field="item.image" class="object-contain"/>
-        <div class="font-metrik text-[0.625rem] pt-1.5 pr-6 justify-end"><PrismicRichText :field="item.fig"/></div> 
+   <carousel ref="myCarousel" v-if="page?.data.slider.length > 1" :wrapAround="true" :autoplay="5000" :itemsToShow="1.5" :snapAlign="'start'" class="w-screen h-[575px]">
+    <slide v-for="(item, i) in page?.data.slider" :key="`page?.data.slider-${i}`" class="!justify-start pl-4">
+      <div><PrismicImage :field="item.image" class="h-[575px]"/>
+        <div class="font-metrik text-[0.625rem] pt-3.5 flex justify-start setpl"><PrismicRichText :field="item.fig"/></div> 
         </div>
       
     </slide>
 
     <template #addons>
       <navigation class=""/>
-      <Pagination class=""/>
+      <Pagination class="pl-6 -translate-y-full"/>
     </template>
   </carousel>
   <SliceZone
@@ -57,12 +56,21 @@ export default {
 });
   }
   },
+  mounted() {
+      let elements = document.getElementsByClassName("setpl")
+      console.log(elements.length)
+      for (let index = 0; index < elements.length; index++) {
+        elements[index].style.paddingLeft = elements.length/3+1.5 + "rem"
+        
+      }
+  },
 }
 </script>
 <style>
 .carousel__pagination{
 justify-content: flex-start;
 counter-reset: section;
+margin-top: 0px;
 }
 :root{
   --vc-pgn-background-color: rgba(255, 0, 0, 0);
@@ -74,8 +82,8 @@ counter-reset: section;
 .carousel__pagination-button::after {
   counter-increment: section;
 content: counter(section);
-width: 1rem;
-  height: 1rem;
+width: 12px;
+  height: 12px;
   border-radius: 50%;
   border: solid;
   border-width: 1px;
@@ -83,7 +91,7 @@ width: 1rem;
   align-items: center;
   display: flex;
   font-family: METRIK;
-  font-size: 14px;
+  font-size: 9px;
 
 }
 </style>
