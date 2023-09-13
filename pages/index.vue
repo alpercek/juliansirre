@@ -21,7 +21,8 @@ const { data: page } = useAsyncData("[home]", () =>
   
       page,
       components,
-      items
+      items,
+      MasonryWall
     }
   },
 

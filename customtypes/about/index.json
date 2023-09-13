@@ -6,16 +6,34 @@
   "status": true,
   "json": {
     "Main": {
-      "text": {
+      "uid": { "type": "UID", "config": { "label": "UID", "placeholder": "" } },
+      "location": {
         "type": "StructuredText",
         "config": {
-          "label": "text",
+          "label": "location",
           "placeholder": "",
           "allowTargetBlank": true,
           "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
         }
       },
-      "uid": { "type": "UID", "config": { "label": "UID", "placeholder": "" } },
+      "address": {
+        "type": "StructuredText",
+        "config": {
+          "label": "address",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "address2": {
+        "type": "StructuredText",
+        "config": {
+          "label": "address2",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",

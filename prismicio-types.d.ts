@@ -11,15 +11,37 @@ type AboutDocumentDataSlicesSlice = never;
  */
 interface AboutDocumentData {
   /**
-   * text field in *About*
+   * location field in *About*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: about.text
+   * - **API ID Path**: about.location
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
-  text: prismic.RichTextField;
+  location: prismic.RichTextField;
+
+  /**
+   * address field in *About*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about.address
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  address: prismic.RichTextField;
+
+  /**
+   * address2 field in *About*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about.address2
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  address2: prismic.RichTextField;
 
   /**
    * Slice Zone field in *About*

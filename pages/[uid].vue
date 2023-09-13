@@ -82,7 +82,7 @@ export default {
       for (let index = 0; index < elements.length; index++) {
         elements[index].style.paddingLeft = elements.length/3+1.5 + "rem"
         
-      }},10)
+      }},500)
   },
 }
 </script>
