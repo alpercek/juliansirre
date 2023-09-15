@@ -37,7 +37,19 @@ const { data: page } = useAsyncData("[home]", () =>
   },
 
   mounted() {
-    
+    (function()
+{
+  if( window.localStorage )
+  {
+    if( !localStorage.getItem('firstLoad') )
+    {
+      localStorage['firstLoad'] = true;
+      window.location.reload();
+    }  
+    else
+      localStorage.removeItem('firstLoad');
+  }
+})();
   var titles = document.getElementsByTagName("section")
 
   for( var i=0; i<titles.length; i++ ) {this.items.push( titles[i].innerHTML );}
@@ -125,6 +137,7 @@ for (let index = 0; index < bottomimage.length; index++) {
       </div>
     </template>
   </MasonryWall>
+
 </div>
 </div>
 </template>
